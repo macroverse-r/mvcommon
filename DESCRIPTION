@@ -1,0 +1,22 @@
+Package: mvcommon
+Title: Common Utilities for macroverse Ecosystem
+Version: 0.1.0
+Authors@R: 
+    person("Benjamin", "Peeters", 
+           email = "benjaminpeeters@protonmail.com",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides shared utilities, validation functions, and common 
+    infrastructure for the macroverse ecosystem. This lightweight package ensures 
+    consistency across all macroverse packages without introducing heavy dependencies.
+License: AGPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Imports:
+    cli (>= 3.0.0),
+    janitor
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
