@@ -16,6 +16,8 @@ Imports:
     cli (>= 3.0.0),
     janitor,
     contextual
+Remotes:
+    macroverse-r/contextual
 Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
