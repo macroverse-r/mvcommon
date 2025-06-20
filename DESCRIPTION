@@ -5,16 +5,17 @@ Authors@R:
     person("Benjamin", "Peeters", 
            email = "benjaminpeeters@protonmail.com",
            role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "0000-0002-5095-2021"))
 Description: Provides shared utilities, validation functions, and common 
     infrastructure for the macroverse ecosystem. This lightweight package ensures 
     consistency across all macroverse packages without introducing heavy dependencies.
-License: AGPL (>= 3)
+License: AGPL (>= 3) + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
     cli (>= 3.0.0),
-    janitor
+    janitor,
+    contextual
 Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

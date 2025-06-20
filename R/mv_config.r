@@ -62,13 +62,13 @@ mv_set_config <- function(..., .reset = FALSE) {
     for (opt in names(.default_options)) {
       .macroverse_options[[opt]] <- .default_options[[opt]]
     }
-    mv_success("Configuration reset to defaults")
+    contextual::cx_success("Configuration reset to defaults")
     return(invisible(old))
   }
   
   dots <- list(...)
   if (length(dots) == 0) {
-    mv_warn("No options provided",
+    contextual::cx_warn("No options provided",
             "i" = "Use mv_get_config() to see current options")
     return(invisible(NULL))
   }
@@ -77,7 +77,7 @@ mv_set_config <- function(..., .reset = FALSE) {
   valid_options <- names(.default_options)
   invalid <- setdiff(names(dots), valid_options)
   if (length(invalid) > 0) {
-    mv_stop("Invalid configuration options",
+    contextual::cx_stop("Invalid configuration options",
             "x" = "Unknown options: {.val {invalid}}",
             "i" = "Valid options: {.val {valid_options}}")
   }
@@ -91,7 +91,7 @@ mv_set_config <- function(..., .reset = FALSE) {
   
   # Confirm changes
   if (mv_get_config("verbose")) {
-    mv_success("Configuration updated",
+    contextual::cx_success("Configuration updated",
                "v" = "Changed {length(dots)} option{?s}")
   }
   

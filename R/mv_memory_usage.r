@@ -42,11 +42,11 @@ mv_memory_usage <- function(object, operation = NULL, ...) {
     other_objects <- list(...)
     estimate <- .estimate_operation_memory(object, operation, other_objects)
     
-    mv_alert("Estimated memory for {.val {operation}} operation: {estimate$formatted}",
+    contextual::cx_alert("Estimated memory for {.val {operation}} operation: {estimate$formatted}",
              type = if (estimate$warning) "warning" else "info")
     
     if (estimate$warning) {
-      mv_warn("Operation may require significant memory",
+      contextual::cx_warn("Operation may require significant memory",
               "!" = "Consider processing in chunks or increasing available memory")
     }
   }

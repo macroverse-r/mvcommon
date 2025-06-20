@@ -34,7 +34,7 @@ mv_as_valid_data <- function(x, ..., .name_repair = "unique") {
     if (length(unique(lengths)) == 1) {
       df <- as.data.frame(x)
     } else {
-      mv_stop("Cannot convert list to data frame",
+      contextual::cx_stop("Cannot convert list to data frame",
               "x" = "List elements have different lengths",
               "i" = "Lengths: {.val {unique(lengths)}}")
     }
@@ -45,7 +45,7 @@ mv_as_valid_data <- function(x, ..., .name_repair = "unique") {
     df <- tryCatch(
       as.data.frame(x),
       error = function(e) {
-        mv_stop("Cannot convert to data frame",
+        contextual::cx_stop("Cannot convert to data frame",
                 "x" = "Object of class {.cls {class(x)}} cannot be converted",
                 "i" = "Error: {e$message}")
       }

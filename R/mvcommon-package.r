@@ -22,9 +22,8 @@
 #' ### Text Processing
 #' - \code{\link{mv_standardize_country_name}}: Prepare country names for ISO matching
 #'
-#' ### CLI-based Messaging
-#' - \code{\link{mv_stop}}, \code{\link{mv_warn}}, \code{\link{mv_success}}, \code{\link{mv_inform}}
-#' - \code{\link{mv_progress_bar}}, \code{\link{mv_alert}}, \code{\link{mv_debug}}
+#' ### Progress Reporting
+#' - \code{\link{mv_progress_bar}}: Progress bars for long operations
 #'
 #' ### Metadata Management
 #' - \code{\link{mv_add_metadata}}, \code{\link{mv_get_metadata}}: Track data provenance

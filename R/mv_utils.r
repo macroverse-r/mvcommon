@@ -32,7 +32,7 @@ mv_check_internet <- function(timeout = 5, test_url = "8.8.8.8") {
   connected <- .try_connection(test_url, timeout)
   
   if (!connected) {
-    mv_warn("No internet connection detected",
+    contextual::cx_warn("No internet connection detected",
             "!" = "Some features may not work properly",
             "i" = "Working offline with cached data only")
   }
@@ -61,7 +61,7 @@ mv_check_package <- function(package, load = FALSE, min_version = NULL) {
   installed <- requireNamespace(package, quietly = TRUE)
   
   if (!installed) {
-    mv_debug("Package '{package}' not installed")
+    contextual::cx_debug("Package '{package}' not installed")
     return(FALSE)
   }
   
@@ -69,7 +69,7 @@ mv_check_package <- function(package, load = FALSE, min_version = NULL) {
   if (!is.null(min_version)) {
     current_version <- utils::packageVersion(package)
     if (current_version < min_version) {
-      mv_warn("Package version too old",
+      contextual::cx_warn("Package version too old",
               "x" = "{package} version {current_version} < required {min_version}",
               "i" = "Please update with install.packages('{package}')")
       return(FALSE)
@@ -83,7 +83,7 @@ mv_check_package <- function(package, load = FALSE, min_version = NULL) {
     })
     
     if (!loaded) {
-      mv_warn("Could not load package '{package}'")
+      contextual::cx_warn("Could not load package '{package}'")
       return(FALSE)
     }
   }
@@ -189,6 +189,6 @@ mv_temp_dir <- function(prefix = "macroverse_", cleanup = TRUE) {
     )
   }
   
-  mv_debug("Created temporary directory: {temp_name}")
+  contextual::cx_debug("Created temporary directory: {temp_name}")
   temp_name
 }

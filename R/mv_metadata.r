@@ -36,7 +36,7 @@ mv_add_metadata <- function(data, ..., .replace = TRUE) {
   metadata <- list(...)
   
   if (length(metadata) == 0) {
-    mv_warn("No metadata provided",
+    contextual::cx_warn("No metadata provided",
             "i" = "Use named arguments to add metadata")
     return(data)
   }
@@ -47,7 +47,7 @@ mv_add_metadata <- function(data, ..., .replace = TRUE) {
     
     # Check if already exists
     if (!.replace && !is.null(attr(data, attr_name))) {
-      mv_warn("Metadata '{name}' already exists",
+      contextual::cx_warn("Metadata '{name}' already exists",
               "i" = "Use .replace = TRUE to overwrite")
       next
     }
@@ -123,7 +123,7 @@ mv_remove_metadata <- function(data, keys = NULL) {
     }
     
     if (length(meta_names) > 0) {
-      mv_success("Removed all metadata ({length(meta_names)} items)")
+      contextual::cx_success("Removed all metadata ({length(meta_names)} items)")
     }
   } else {
     # Remove specific keys
@@ -137,7 +137,7 @@ mv_remove_metadata <- function(data, keys = NULL) {
     }
     
     if (removed > 0) {
-      mv_success("Removed {removed} metadata item{?s}")
+      contextual::cx_success("Removed {removed} metadata item{?s}")
     }
   }
   

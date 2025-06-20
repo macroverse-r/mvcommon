@@ -41,7 +41,7 @@ mv_validate_date_format <- function(dates, format = "auto", convert = FALSE) {
     year = .validate_years(dates_char),
     quarter = .validate_quarters(dates_char),
     date = .validate_dates(dates_char),
-    mv_stop("Invalid date format",
+    contextual::cx_stop("Invalid date format",
             "x" = "Format '{format}' not recognized",
             "i" = "Use 'year', 'quarter', 'date', or 'auto'")
   )
@@ -84,7 +84,7 @@ mv_validate_date_format <- function(dates, format = "auto", convert = FALSE) {
   
   if (!all(valid)) {
     invalid_years <- unique(years[!valid])
-    mv_stop("Invalid year format",
+    contextual::cx_stop("Invalid year format",
             "x" = "Years must be 4-digit numbers",
             "i" = "Invalid values: {.val {invalid_years}}")
   }
@@ -92,7 +92,7 @@ mv_validate_date_format <- function(dates, format = "auto", convert = FALSE) {
   # Check range
   year_nums <- as.integer(years[!is.na(years)])
   if (any(year_nums < 1800 | year_nums > 2100)) {
-    mv_warn("Unusual year values detected",
+    contextual::cx_warn("Unusual year values detected",
             "!" = "Years outside 1800-2100 range",
             "i" = "Please verify these are correct")
   }
@@ -106,7 +106,7 @@ mv_validate_date_format <- function(dates, format = "auto", convert = FALSE) {
   
   if (!all(valid)) {
     invalid_quarters <- unique(quarters[!valid])
-    mv_stop("Invalid quarter format",
+    contextual::cx_stop("Invalid quarter format",
             "x" = "Quarters must be in format 'YYYYQ#' (e.g., '2020Q1')",
             "i" = "Invalid values: {.val {invalid_quarters}}")
   }
@@ -120,7 +120,7 @@ mv_validate_date_format <- function(dates, format = "auto", convert = FALSE) {
   
   if (any(is.na(parsed) & !is.na(dates))) {
     invalid_dates <- unique(dates[is.na(parsed) & !is.na(dates)])
-    mv_stop("Invalid date format",
+    contextual::cx_stop("Invalid date format",
             "x" = "Could not parse as dates",
             "i" = "Invalid values: {.val {invalid_dates}}")
   }
