@@ -200,7 +200,9 @@ mv_question <- function(message, options = NULL, .envir = parent.frame()) {
 #' @export
 mv_text <- function(message, ..., verbose = TRUE, .envir = parent.frame()) {
   if (isTRUE(verbose)) {
+    cli::cli_div(theme = list(div = list("margin-left" = 4)))
     cli::cli_text(message = message, ..., .envir = .envir)
+    cli::cli_end()
   }
 }
 
@@ -303,8 +305,9 @@ mv_h3 <- function(title, .envir = parent.frame()) {
 #'
 #' @export
 mv_h4 <- function(title, .envir = parent.frame()) {
-  # Use cli_inform with ">" bullet
-  cli::cli_inform(c(">" = title), .envir = .envir)
+  # Use the same color as mv_h3 title for the arrow
+  colored_arrow_title <- paste0("\033[38;5;141m→ \033[0m", title)
+  cli::cli_text(colored_arrow_title, .envir = .envir)
 }
 
 #' Smart title function that adapts based on call depth
@@ -387,20 +390,20 @@ mv_title <- function(title, .envir = parent.frame()) {
 #'
 #' @param message Debug message
 #' @param ... Additional message components
-#' @param debug Logical, whether to show debug messages (default: from config)
+#' @param debug Logical, whether to show debug messages 
 #' @param .envir Environment for string interpolation
 #'
 #' @export
-mv_debug <- function(message, ..., debug = mv_get_config("debug"), .envir = parent.frame()) {
+mv_debug <- function(message, ..., debug = TRUE, .envir = parent.frame()) {
   if (isTRUE(debug)) {
-    cli::cli_div(theme = list(.debug = list(color = "grey60", "font-style" = "italic")))
-    cli::cli_text("{.debug [DEBUG] {message}}", .envir = .envir)
+    # Use simpler styling to avoid cli issues
+    formatted_message <- paste0(cli::style_italic(cli::col_grey("[DEBUG] ")), message)
+    cli::cli_text(formatted_message, .envir = .envir)
     
     # Show additional details if provided
     details <- list(...)
     if (length(details) > 0) {
       cli::cli_bullets(details, .envir = .envir)
     }
-    cli::cli_end()
   }
 }

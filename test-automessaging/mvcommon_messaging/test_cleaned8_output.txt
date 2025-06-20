@@ -1,0 +1,281 @@
+
+R version 4.5.0 (2025-04-11) -- "How About a Twenty-Six"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[90m~/.Rprofile loaded[0m
+> source("mv_title_cleaned8.R"); source("test_main.R"); A()
+[DEBUG] mv_title: user_depth=0, title='My first execution (', counters=[0,0,0]
+═════════ 1. MY FIRST EXECUTION (SHOULD BE LEVEL 1 - NUMBERED 1.) ═════════
+[DEBUG] mv_title: user_depth=1, title='Starting A', counters=[1,0,0]
+[38;5;99m───── 1.1. Starting A ─────[39m
+      Processing in A...
+[DEBUG] mv_title: user_depth=2, title='Starting B', counters=[1,1,0]
+[38;5;141m─── 1.1.1. Starting B[39m
+         Processing in B...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,1]
+[38;5;141m→ [39mStarting C
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,1]
+[38;5;141m→ [39mStarting C
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 3
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,1]
+[38;5;141m→ [39mStarting C
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+✔ Finished B
+[DEBUG] mv_title: user_depth=1, title='Continuing A', counters=[1,1,1]
+[38;5;99m───── 1.2. Continuing A ─────[39m
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[1,2,0]
+[38;5;141m─── 1.2.1. Starting B2[39m
+         Processing in B2...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[1,2,1]
+[38;5;141m→ [39mStarting D2
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[1,2,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[1,2,1]
+[38;5;141m→ [39mStarting D2
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[1,2,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[1,2,1]
+[38;5;141m─── 1.2.2. Starting B2[39m
+         Processing in B2...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[1,2,2]
+[38;5;141m→ [39mStarting D2
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[1,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[1,2,2]
+[38;5;141m→ [39mStarting D2
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[1,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+✔ Finished A
+[DEBUG] mv_title: user_depth=0, title='My first prints (sho', counters=[1,2,2]
+═════════ 2. MY FIRST PRINTS (SHOULD BE LEVEL 1 - NUMBERED 2.) ═════════
+[DEBUG] mv_title: user_depth=0, title='Subsection 1 of 'My ', counters=[2,0,0]
+[38;5;99m───── 2.1. Subsection 1 of 'My first prints' (should be level 2 - numbered 2.1.) ─────[39m
+      Hello World
+[DEBUG] mv_title: user_depth=0, title='Subsection 2 of 'My ', counters=[2,1,0]
+[38;5;99m───── 2.2. Subsection 2 of 'My first prints' (should be level 2 - numbered 2.2.) ─────[39m
+      Hello Claude
+[DEBUG] mv_title: user_depth=1, title='Starting A', counters=[2,2,0]
+[38;5;141m─── 2.2.1. Starting A[39m
+         Processing in A...
+[DEBUG] mv_title: user_depth=2, title='Starting B', counters=[2,2,1]
+[38;5;141m→ [39mStarting B
+         Processing in B...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[2,2,1]
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[2,2,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[2,2,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[2,2,1]
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[2,2,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[2,2,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 3
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[2,2,1]
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[2,2,1]
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[2,2,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+✔ Finished B
+[DEBUG] mv_title: user_depth=1, title='Continuing A', counters=[2,2,1]
+[38;5;141m─── 2.2.2. Continuing A[39m
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[2,2,2]
+[38;5;141m→ [39mStarting B2
+         Processing in B2...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,2]
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,2]
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[2,2,2]
+[38;5;141m→ [39mStarting B2
+         Processing in B2...
+         Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,2]
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,2]
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+✔ Finished A
+[DEBUG] mv_title: user_depth=1, title='Starting A', counters=[2,2,2]
+═════════ 1. STARTING A ═════════
+   Processing in A...
+[DEBUG] mv_title: user_depth=2, title='Starting B', counters=[1,0,0]
+[38;5;99m───── 1.1. Starting B ─────[39m
+      Processing in B...
+      Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,0]
+[38;5;141m─── 1.1.1. Starting C[39m
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,1]
+[38;5;141m→ [39mStarting D
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,1]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,1]
+[38;5;141m─── 1.1.2. Starting C[39m
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,2]
+[38;5;141m→ [39mStarting D
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,2]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+         Iteration 3
+[DEBUG] mv_title: user_depth=3, title='Starting C', counters=[1,1,2]
+[38;5;141m─── 1.1.3. Starting C[39m
+         Processing in C...
+[DEBUG] mv_title: user_depth=4, title='Starting D', counters=[1,1,3]
+[38;5;141m→ [39mStarting D
+         Processing in D...
+[DEBUG] mv_title: user_depth=5, title='Starting E', counters=[1,1,3]
+         Processing in E...
+✔ Finished E
+✔ Finished D
+✔ Finished C
+✔ Finished B
+[DEBUG] mv_title: user_depth=1, title='Continuing A', counters=[1,1,3]
+═════════ 2. CONTINUING A ═════════
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[2,0,0]
+[38;5;99m───── 2.1. Starting B2 ─────[39m
+      Processing in B2...
+      Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,1,0]
+[38;5;141m─── 2.1.1. Starting D2[39m
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,1,1]
+[38;5;141m→ [39mStarting E
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,1,1]
+[38;5;141m─── 2.1.2. Starting D2[39m
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,1,2]
+[38;5;141m→ [39mStarting E
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+[DEBUG] mv_title: user_depth=2, title='Starting B2', counters=[2,1,2]
+[38;5;99m───── 2.2. Starting B2 ─────[39m
+      Processing in B2...
+      Iteration 1
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,0]
+[38;5;141m─── 2.2.1. Starting D2[39m
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,1]
+[38;5;141m→ [39mStarting E
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+         Iteration 2
+[DEBUG] mv_title: user_depth=3, title='Starting D2', counters=[2,2,1]
+[38;5;141m─── 2.2.2. Starting D2[39m
+         Processing in D2...
+[DEBUG] mv_title: user_depth=4, title='Starting E', counters=[2,2,2]
+[38;5;141m→ [39mStarting E
+         Processing in E...
+✔ Finished E
+✔ Finished D2
+✔ Finished B2
+✔ Finished A
+> 
