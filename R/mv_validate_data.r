@@ -13,11 +13,13 @@
 #' @return The validated (and possibly fixed) data
 #' @export
 #' @examples
-#' # Basic validation
+#' \dontrun{
+#' # Expected input: the panel-data format produced by macrodata::md_data()
+#' # and consumed by pplot functions. Schema is still being pinned down
+#' # (see GitHub issue on package boundary).
 #' data <- mv_validate_data(my_data)
-#' 
-#' # Validation without automatic fixes
 #' data <- mv_validate_data(my_data, fix = FALSE)
+#' }
 mv_validate_data <- function(data, 
                             check_encoding = TRUE,
                             check_structure = TRUE, 
