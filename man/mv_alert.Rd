@@ -2,17 +2,24 @@
 % Please edit documentation in R/mv_messaging.r
 \name{mv_alert}
 \alias{mv_alert}
-\title{Show alert message}
+\title{Alert message}
 \usage{
-mv_alert(message, type = "info", .envir = parent.frame())
+mv_alert(
+  message,
+  type = c("info", "warning", "error"),
+  ...,
+  .envir = parent.frame()
+)
 }
 \arguments{
-\item{message}{Alert message}
+\item{message}{Main alert message (scalar string)}
 
-\item{type}{Type of alert: "info", "success", "warning", or "danger"}
+\item{type}{One of "info", "warning", "error"}
+
+\item{...}{Additional bullet components using cli syntax}
 
 \item{.envir}{Environment for string interpolation}
 }
 \description{
-Show alert message
+Alert message
 }

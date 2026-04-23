@@ -33,7 +33,7 @@ NULL
 #'
 #' @export
 mv_stop <- function(message, ..., .envir = parent.frame()) {
-  cli::cli_abort(message, ..., .envir = .envir)
+  cli::cli_abort(c(message, ...), .envir = .envir)
 }
 
 #' Warning with formatted message
@@ -44,7 +44,7 @@ mv_stop <- function(message, ..., .envir = parent.frame()) {
 #'
 #' @export
 mv_warn <- function(message, ..., .envir = parent.frame()) {
-  cli::cli_warn(message, ..., .envir = .envir)
+  cli::cli_warn(c(message, ...), .envir = .envir)
 }
 
 #' Information message
@@ -55,7 +55,7 @@ mv_warn <- function(message, ..., .envir = parent.frame()) {
 #'
 #' @export
 mv_inform <- function(message, ..., .envir = parent.frame()) {
-  cli::cli_inform(message, ..., .envir = .envir)
+  cli::cli_inform(c(message, ...), .envir = .envir)
 }
 
 #' Success message
@@ -66,22 +66,29 @@ mv_inform <- function(message, ..., .envir = parent.frame()) {
 #'
 #' @export
 mv_success <- function(message, ..., .envir = parent.frame()) {
-  cli::cli_inform(c("v" = message, ...), .envir = .envir)
+  mv_inform(c("v" = message, ...), .envir = .envir)
 }
 
 #' Alert message
 #'
-#' @param message Main alert message
-#' @param type Type of alert ("info", "warning", "error")
+#' @param message Main alert message (scalar string)
+#' @param type One of "info", "warning", "error"
+#' @param ... Additional bullet components using cli syntax
 #' @param .envir Environment for string interpolation
 #'
 #' @export
-mv_alert <- function(message, type = "info", .envir = parent.frame()) {
+mv_alert <- function(message, type = c("info", "warning", "error"), ...,
+                     .envir = parent.frame()) {
+  stopifnot(
+    "`message` must be a character vector" = is.character(message),
+    "`message` must be length 1"           = length(message) == 1L,
+    "`message` must not be NA"             = !is.na(message)
+  )
+  type <- match.arg(type)
   switch(type,
-    "info" = cli::cli_inform(c("i" = message), .envir = .envir),
-    "warning" = cli::cli_warn(c("!" = message), .envir = .envir),
-    "error" = cli::cli_abort(c("x" = message), .envir = .envir),
-    cli::cli_inform(c("i" = message), .envir = .envir)
+    info    = mv_inform(c("i" = message), ..., .envir = .envir),
+    warning = mv_warn(c("!" = message), ..., .envir = .envir),
+    error   = mv_stop(c("x" = message), ..., .envir = .envir)
   )
 }
 
@@ -95,6 +102,6 @@ mv_alert <- function(message, type = "info", .envir = parent.frame()) {
 #' @export
 mv_debug <- function(message, ..., debug = mv_get_config("debug"), .envir = parent.frame()) {
   if (isTRUE(debug)) {
-    cli::cli_inform(c("*" = paste0("[DEBUG] ", message), ...), .envir = .envir)
+    mv_inform(c("*" = paste0("[DEBUG] ", message), ...), .envir = .envir)
   }
 }

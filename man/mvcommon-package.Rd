@@ -38,10 +38,16 @@ consistency across all macroverse packages without introducing heavy dependencie
 }
 }
 
-\subsection{CLI-based Messaging}{
+\subsection{Messaging}{
 \itemize{
-\item \code{\link{mv_stop}}, \code{\link{mv_warn}}, \code{\link{mv_success}}, \code{\link{mv_inform}}
-\item \code{\link{mv_progress_bar}}, \code{\link{mv_alert}}, \code{\link{mv_debug}}
+\item \code{\link{mv_stop}}, \code{\link{mv_warn}}, \code{\link{mv_inform}}: Errors, warnings, messages via cli
+\item \code{\link{mv_success}}, \code{\link{mv_alert}}, \code{\link{mv_debug}}: Success, alert, and debug variants
+}
+}
+
+\subsection{Progress Reporting}{
+\itemize{
+\item \code{\link{mv_progress_bar}}: Progress bars for long operations
 }
 }
 
@@ -81,7 +87,7 @@ Other macroverse packages:
 }
 
 \author{
-\strong{Maintainer}: Benjamin Peeters \email{benjaminpeeters@protonmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Benjamin Peeters \email{benjaminpeeters@protonmail.com} (\href{https://orcid.org/0000-0002-5095-2021}{ORCID})
 
 }
 \keyword{internal}

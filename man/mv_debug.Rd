@@ -2,7 +2,7 @@
 % Please edit documentation in R/mv_messaging.r
 \name{mv_debug}
 \alias{mv_debug}
-\title{Show debug message}
+\title{Debug message}
 \usage{
 mv_debug(message, ..., debug = mv_get_config("debug"), .envir = parent.frame())
 }
@@ -11,10 +11,10 @@ mv_debug(message, ..., debug = mv_get_config("debug"), .envir = parent.frame())
 
 \item{...}{Additional message components}
 
-\item{debug}{Logical, whether to show debug messages (default: from config)}
+\item{debug}{Whether to show debug messages}
 
 \item{.envir}{Environment for string interpolation}
 }
 \description{
-Show debug message
+Debug message
 }
