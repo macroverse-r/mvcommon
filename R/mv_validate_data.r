@@ -26,7 +26,7 @@ mv_validate_data <- function(data,
   
   # Check basic structure
   if (!inherits(data, c("data.frame", "tbl", "data.table"))) {
-    contextual::cx_stop("Invalid data type", 
+    mv_stop("Invalid data type", 
             "x" = "Expected a data.frame, tibble, or data.table",
             "i" = "Got {.cls {class(data)}}")
   }
@@ -54,7 +54,7 @@ mv_validate_data <- function(data,
   
   # Report fixes
   if (verbose && length(fixes_applied) > 0) {
-    contextual::cx_success("Data validation complete",
+    mv_success("Data validation complete",
               "v" = "Applied {length(fixes_applied)} fixes:",
               "{fixes_applied}")
   }

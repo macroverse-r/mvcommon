@@ -1,6 +1,6 @@
 Package: mvcommon
 Title: Common Utilities for macroverse Ecosystem
-Version: 0.1.0
+Version: 0.1.2
 Authors@R: 
     person("Benjamin", "Peeters", 
            email = "benjaminpeeters@protonmail.com",
@@ -16,11 +16,7 @@ Imports:
     cli (>= 3.0.0),
     janitor
 Suggests:
-    contextual,
     testthat (>= 3.0.0)
-Remotes:
-    macroverse-r/contextual
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-
+RoxygenNote: 7.3.3

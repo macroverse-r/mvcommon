@@ -2,17 +2,17 @@
 % Please edit documentation in R/mv_messaging.r
 \name{mv_inform}
 \alias{mv_inform}
-\title{Show information message}
+\title{Information message}
 \usage{
 mv_inform(message, ..., .envir = parent.frame())
 }
 \arguments{
-\item{message}{Information message}
+\item{message}{Main information message}
 
 \item{...}{Additional message components using cli syntax}
 
 \item{.envir}{Environment for string interpolation}
 }
 \description{
-Show information message
+Information message
 }

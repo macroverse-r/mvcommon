@@ -50,7 +50,7 @@ mv_get_colors <- function(palette = NULL) {
   } else if (palette %in% names(palettes)) {
     return(palettes[[palette]])
   } else {
-    contextual::cx_stop("Invalid palette name",
+    mv_stop("Invalid palette name",
             "x" = "Palette '{palette}' not found",
             "i" = "Available palettes: {.val {names(palettes)}}")
   }

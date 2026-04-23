@@ -2,17 +2,17 @@
 % Please edit documentation in R/mv_messaging.r
 \name{mv_success}
 \alias{mv_success}
-\title{Show success message}
+\title{Success message}
 \usage{
 mv_success(message, ..., .envir = parent.frame())
 }
 \arguments{
-\item{message}{Success message}
+\item{message}{Main success message}
 
 \item{...}{Additional message components using cli syntax}
 
 \item{.envir}{Environment for string interpolation}
 }
 \description{
-Show success message
+Success message
 }

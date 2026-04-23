@@ -2,7 +2,7 @@
 % Please edit documentation in R/mv_messaging.r
 \name{mv_warn}
 \alias{mv_warn}
-\title{Warn with formatted warning message}
+\title{Warning with formatted message}
 \usage{
 mv_warn(message, ..., .envir = parent.frame())
 }
@@ -14,5 +14,5 @@ mv_warn(message, ..., .envir = parent.frame())
 \item{.envir}{Environment for string interpolation}
 }
 \description{
-Warn with formatted warning message
+Warning with formatted message
 }
