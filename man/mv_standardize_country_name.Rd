@@ -25,7 +25,7 @@ Handles common variations, special characters, and government terminology.
 mv_standardize_country_name(c("USA", "U.S.A.", "United States"))
 
 # Handle special characters
-mv_standardize_country_name("Côte d'Ivoire")
+mv_standardize_country_name("C\u00f4te d'Ivoire")
 
 # Government terms
 mv_standardize_country_name("Republic of Korea")

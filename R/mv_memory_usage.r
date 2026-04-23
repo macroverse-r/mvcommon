@@ -33,9 +33,12 @@ mv_memory_usage <- function(object, operation = NULL, ...) {
   dims <- .get_dimensions(object)
   
   # Print basic info
-  mv_inform("Memory usage for {.val {obj_name}}",
-            "i" = "Size: {size_info$formatted}",
-            "i" = if (!is.null(dims)) "Dimensions: {dims}" else NULL)
+  bullets <- c("Memory usage for {.val {obj_name}}",
+               "i" = "Size: {size_info$formatted}")
+  if (!is.null(dims)) {
+    bullets <- c(bullets, "i" = "Dimensions: {dims}")
+  }
+  mv_inform(bullets)
   
   # Estimate operation memory if requested
   if (!is.null(operation)) {
@@ -44,7 +47,7 @@ mv_memory_usage <- function(object, operation = NULL, ...) {
     
     mv_alert("Estimated memory for {.val {operation}} operation: {estimate$formatted}",
              type = if (estimate$warning) "warning" else "info")
-    
+
     if (estimate$warning) {
       mv_warn("Operation may require significant memory",
               "!" = "Consider processing in chunks or increasing available memory")
@@ -79,7 +82,7 @@ mv_memory_usage <- function(object, operation = NULL, ...) {
 
 .get_dimensions <- function(object) {
   if (is.data.frame(object) || is.matrix(object)) {
-    paste0(format(nrow(object), big.mark = ","), " rows × ", 
+    paste0(format(nrow(object), big.mark = ","), " rows x ",
            ncol(object), " columns")
   } else if (is.list(object)) {
     paste0("List with ", length(object), " elements")

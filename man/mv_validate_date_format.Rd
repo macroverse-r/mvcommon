@@ -29,6 +29,6 @@ mv_validate_date_format(c("2020", "2021"), format = "year")
 # Validate quarters
 mv_validate_date_format(c("2020Q1", "2020Q2"), format = "quarter")
 
-# Auto-detect format
-mv_validate_date_format(c("2020", "2020Q1"), format = "auto")
+# Auto-detect format (all inputs must share a single format)
+mv_validate_date_format(c("2020", "2021"), format = "auto")
 }
