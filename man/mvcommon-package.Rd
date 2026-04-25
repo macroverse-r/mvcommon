@@ -20,12 +20,6 @@ consistency across all macroverse packages without introducing heavy dependencie
 }
 }
 
-\subsection{Performance Monitoring}{
-\itemize{
-\item \code{\link{mv_memory_usage}}: Check memory usage and estimate operation requirements
-}
-}
-
 \subsection{Configuration Management}{
 \itemize{
 \item \code{\link{mv_set_config}}, \code{\link{mv_get_config}}: Manage macroverse ecosystem settings
