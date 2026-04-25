@@ -13,9 +13,6 @@
 #' - \code{\link{mv_validate_date_format}}: Ensure proper date/time formatting
 #' - \code{\link{mv_as_valid_data}}: Convert and validate in one step
 #'
-#' ### Performance Monitoring
-#' - \code{\link{mv_memory_usage}}: Check memory usage and estimate operation requirements
-#'
 #' ### Configuration Management
 #' - \code{\link{mv_set_config}}, \code{\link{mv_get_config}}: Manage macroverse ecosystem settings
 #'

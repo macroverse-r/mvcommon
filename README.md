@@ -98,12 +98,9 @@ data <- mv_add_metadata(data,
 mv_get_metadata(data)
 ```
 
-### Memory and Performance
+### Internet Connectivity
 
 ``` r
-# Check memory usage before operations
-mv_memory_usage(large_dataset, operation = "join", another_dataset)
-
 # Check internet connectivity
 if (mv_check_internet()) {
   # Download data...
@@ -137,4 +134,4 @@ Meta-package loading all components
 
 ## License
 
-This package is licensed under AGPL-3.0.
+This package is licensed under AGPL-3.0. See LICENSE for details.

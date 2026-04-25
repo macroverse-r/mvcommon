@@ -104,12 +104,9 @@ data <- mv_add_metadata(data,
 mv_get_metadata(data)
 ```
 
-### Memory and Performance
+### Internet Connectivity
 
-```{r memory-example, eval = FALSE}
-# Check memory usage before operations
-mv_memory_usage(large_dataset, operation = "join", another_dataset)
-
+```{r internet-example, eval = FALSE}
 # Check internet connectivity
 if (mv_check_internet()) {
   # Download data...
@@ -139,8 +136,4 @@ The mvcommon package is the foundation of the macroverse ecosystem:
 
 ## License
 
-This package is available under a dual-licensing model:
-- **Open Source**: AGPL-3.0 for academic and non-commercial use
-- **Commercial**: Alternative licensing available for commercial applications
-
-See LICENSE.md for details.
+This package is licensed under AGPL-3.0. See LICENSE for details.
